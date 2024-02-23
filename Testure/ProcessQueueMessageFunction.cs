@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using Testure.Mediator.ProcessQueueMessage;
 
-namespace Testure.ProcessQueueMessage;
+namespace Testure;
 
 /// <summary>
 /// Process queue message Function.
@@ -38,7 +38,7 @@ public class ProcessQueueMessageFunction
     /// Processes queue message.
     /// </summary>
     [Function("ProcessQueueMessage")]
-    public async Task Run([QueueTrigger("%QueueName%", Connection = "AzureStorageAccountConnectionString")] string item)
+    public async Task RunAsync([QueueTrigger("%QueueName%", Connection = "AzureStorageAccountConnectionString")] string item)
     {
         try
         {

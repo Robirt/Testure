@@ -40,7 +40,7 @@ public class ListBlobsFunction
     /// Lists blobs.
     /// </summary>
     [Function("ListBlobs")]
-    public async Task<List<string>> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData httpRequestData)
+    public async Task<List<string>> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData httpRequestData)
     {
         try
         {
